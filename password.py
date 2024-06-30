@@ -36,11 +36,9 @@ while UserAnswer != 5:
         char_set += punctuation
 
     if UserAnswer != 5:
-        print(f'Do you want to add more symbols?\n{a}{b}{c}{d}{e}')
+        print(f'do you want to add new characters?\n{a}{b}{c}{d}{e}')
+        
 
-if char_set:
-    print('Generated password: ', end='')
-    for i in range(passlength):
+print('Generated password: ', end='')
+for i in range(passlength):
         print(random.choice(char_set), end='')
-else:
-    pass
