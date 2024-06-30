@@ -26,6 +26,8 @@ if fuel_required_AB > fuel_capacity:
     exit()
 else:
     print('Літак може долетіти в пункт B з точки А\n')
+    remaining_fuel_after_AB = fuel_capacity - fuel_required_AB
+    print(f'Після прибуття в пункт B залишиться {remaining_fuel_after_AB} літрів палива\n')
 
 if fuel_required_BC > fuel_capacity:
     additional_fuel_needed = fuel_required_BC - fuel_capacity
@@ -35,7 +37,6 @@ else:
 
 print(f"Для подолання відстані між пунктом А і пунктом В необхідно {fuel_required_AB} літрів палива")
 print(f"Для подолання відстані між пунктом В і пунктом С необхідно {fuel_required_BC} літрів палива")
-
 
 total_fuel_required = fuel_required_AB + fuel_required_BC
 print(f"Необхідна мінімальна кількість палива для польоту з пункту А в пункт С через пункт В: {total_fuel_required} літрів")
