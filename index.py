@@ -1,21 +1,57 @@
-import random
+def find(list, search_number):
+    for i in list:
+        if i == search_number:
+            print('We search this number:', end=' ')
+            return search_number
+    raise ValueError('This number is not listed')
 
-def main():
-    random_numbers = []
-    for i in range(10):
-        random_numbers.append(random.randint(0, 100))
+try:
+    search_number = 3
+    list = [1, 2, 3, 4, 5, 6]
+    found = find(list, search_number)
+    print(found)
 
-    max_number = random_numbers[0]
-    min_number = random_numbers[0]
+except ValueError as message:
+    print(message)
 
-    for num in random_numbers:
-        if num > max_number:
-            max_number = num
-        if num < min_number:
-            min_number = num
 
-    print("Згенерований список випадкових чисел:", random_numbers)
-    print("Максимальне число в списку:", max_number)
-    print("Мінімальне число в списку:", min_number)
+#------------------------------------------------Task 2------------------------------------------------#
 
-main()
+
+# def delete(lst, delete_num):
+#     if delete_num in lst:
+#         lst.remove(delete_num)
+#         return lst
+#     else:
+#         raise ValueError('This number is not listed')
+
+# try:
+#     my_list = [1, 2, 3, 4, 5]
+#     delete_num = 3
+#     new_list = delete(my_list, delete_num)
+
+#     print('Deleted:', delete_num)
+#     print('Updated list:', new_list)
+
+# except ValueError as message:
+#     print(message)
+
+
+
+
+#------------------------------------------------Task 3 ------------------------------------------------#
+
+# def check(num):
+
+#     if num % 2 == 0:
+#         return num
+#     else:
+#         raise ValueError('Wrong number')
+
+# try:
+#     number = 3
+#     result = check(number)
+#     print('the number', result ,  'is even')
+
+# except ValueError as e:
+#     print(e)
